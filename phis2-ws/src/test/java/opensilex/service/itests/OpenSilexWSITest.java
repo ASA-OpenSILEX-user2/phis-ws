@@ -139,7 +139,7 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
                 listObjects.add(obj);
 
             } catch (IOException ex) {
-                Logger.getLogger(OpenSilexWSIT.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(OpenSilexWSITest.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
@@ -891,7 +891,7 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
         try {
             fileDescriptionStr = mapper.writeValueAsString(fileDescriptionPostDTO);
         } catch (JsonProcessingException ex) {
-            Logger.getLogger(OpenSilexWSIT.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(OpenSilexWSITest.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         ClassLoader classLoader = getClass().getClassLoader();
