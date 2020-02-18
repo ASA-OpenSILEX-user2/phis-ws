@@ -68,7 +68,7 @@ import org.junit.runners.MethodSorters;
  * @author training
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class OpenSilexWSIT extends InternalProviderIntegrationTestHelper {
+public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
 
     private static final SimpleDateFormat dateFormater = new SimpleDateFormat("yyyy_MM_dd__HH-mm-ss");
     private static final Long itTimeMillis = System.currentTimeMillis();
