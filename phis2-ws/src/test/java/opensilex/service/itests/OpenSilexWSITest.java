@@ -765,6 +765,7 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
     public void _6_01_provenance_01_POST_ITest() {
 
         String nameofCurrMethod = new Throwable().getStackTrace()[0].getMethodName();
+        preTestCaseTrace(nameofCurrMethod);
 
         ArrayList<ProvenancePostDTO> provenances = new ArrayList<>();
         ProvenancePostDTO provenancePostDTO = new ProvenancePostDTO();
@@ -779,6 +780,8 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
                 .request()
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + this.TOKKEN)
                 .post(provenancesEntity);
+        
+        System.out.println("--------------- Response: \n" + response);
 
         ResultForm resultForm = response.readEntity(ResultForm.class);
 
@@ -802,6 +805,7 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
     public void _6_02_dataset_01_POST_ITest() {
 
         String nameofCurrMethod = new Throwable().getStackTrace()[0].getMethodName();
+        preTestCaseTrace(nameofCurrMethod);
 
         ArrayList<DataPostDTO> data = new ArrayList<>();
 
@@ -828,6 +832,8 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
                 .request()
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + this.TOKKEN)
                 .post(dataEntity);
+        
+        System.out.println("--------------- Response: \n" + response);
 
         ResultForm resultForm = response.readEntity(ResultForm.class);
 
@@ -851,6 +857,8 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
                 .request()
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + this.TOKKEN)
                 .get();
+        
+        System.out.println("--------------- Response: \n" + response);
 
         ResultForm resultForm = response.readEntity(ResultForm.class);
 
@@ -870,6 +878,7 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
     public void _7_image_01_POST_ITest() {
 
         String nameofCurrMethod = new Throwable().getStackTrace()[0].getMethodName();
+        preTestCaseTrace(nameofCurrMethod);
 
         FileDescriptionPostDTO fileDescriptionPostDTO = new FileDescriptionPostDTO();
         fileDescriptionPostDTO.setRdfType(imageHemisphericalImageRdfType);
@@ -907,6 +916,8 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
                     .request()
                     .header(HttpHeaders.AUTHORIZATION, "Bearer " + this.TOKKEN)
                     .post(Entity.entity(multipart, MediaType.MULTIPART_FORM_DATA));
+            
+            System.out.println("--------------- Response: \n" + response);
 
             ResultForm resultForm = response.readEntity(ResultForm.class);
 
@@ -935,6 +946,7 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
                 .request()
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + this.TOKKEN)
                 .get();
+        
         System.out.println("--------------- Response: \n" + response);
 
         ResultForm resultForm = response.readEntity(ResultForm.class);
@@ -949,3 +961,4 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
     }
 
 }
+
