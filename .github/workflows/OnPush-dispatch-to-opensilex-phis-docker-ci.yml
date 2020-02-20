@@ -11,8 +11,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Informations
       run: |
-        echo "Event : ${{ toJson(github.event) }}";
-        echo "Github : ${{ toJson(github) }}";
+        echo "Github : ${{ toJson(github) }}"
     - name: curl (dispatch-to-opensilex-phis-docker-ci)
       run: |
         curl -XPOST -u "${{ secrets.TRIGGER_USERNAME}}:${{secrets.TRIGGER_TOKEN}}"  -H "Accept:application/vnd.github.everest-preview+json"  -H "Content-Type:application/json" https://api.github.com/repos/"${{ secrets.TRIGGER_USERNAME}}"/"${{ secrets.TRIGGER_REPO_NAME}}"/dispatches --data '{"event_type":"build_application", "client_payload":{"repository":"'"$GITHUB_REPOSITORY"'", "sha":"'"$GITHUB_SHA"'", "ref":"'"$GITHUB_REF"'" }}'
