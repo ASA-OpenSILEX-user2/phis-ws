@@ -1,4 +1,4 @@
-name: CI
+name: CI | OnPush-dispatch-to-opensilex-phis-docker-ci
 
 on: [push]
 
