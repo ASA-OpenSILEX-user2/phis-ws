@@ -703,6 +703,7 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
     public void _5_04_variables_01_POST_ITest() {
 
         String nameofCurrMethod = new Throwable().getStackTrace()[0].getMethodName();
+        preTestCaseTrace(nameofCurrMethod);
 
         ArrayList<VariableDTO> variables = new ArrayList<>();
         VariableDTO variableDTO = new VariableDTO();
