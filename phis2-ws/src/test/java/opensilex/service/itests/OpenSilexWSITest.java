@@ -756,7 +756,8 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
         Variable variable = (Variable) usersList.get(0);
         String uriVariable = variable.getUri();
 
-        assertTrue("URI of returned variable should be the same as the one returned when it was created", StringUtils.equalsIgnoreCase(uriVariable, itVariableURI));
+        //should fail
+        assertFalse("URI of returned variable should be the same as the one returned when it was created", StringUtils.equalsIgnoreCase(uriVariable, itVariableURI));
 
         postTestCaseTrace(nameofCurrMethod);
 
