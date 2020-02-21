@@ -179,7 +179,7 @@ public class OpenSilexWSITest extends InternalProviderIntegrationTestHelper {
         this.getToken();
         System.out.println("-----------Token: " + this.TOKKEN);
 
-        assertTrue("Token must be setted", this.TOKKEN.equals("")); // ITest should fail
+        assertFalse("Token must be setted", this.TOKKEN.equals(""));  
 
         postTestCaseTrace(nameofCurrMethod);
 
